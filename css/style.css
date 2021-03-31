@@ -48,3 +48,13 @@ body {
     /* clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%); */
     position: relative;
 }
+
+.logo-box {
+    position: absolute;
+    top: 4em;
+    left: 4em;
+}
+
+.logo {
+    height: 3.5rem;
+}
