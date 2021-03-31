@@ -161,3 +161,72 @@ body {
         transform: translate(0);
     }
 }
+
+@keyframes moveInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    99% {
+        opacity: .9;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 1.5em;
+    display: inline-block;
+    border-radius: 30rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.btn:hover {
+    transform: translateY(-.5em);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-.25em);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    z-index: -1;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: rgb(8, 6, 6);
+}
+
+.btn::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4);
+    opacity: 0;
+}
+
+.btn-animated {
+    /* animation: moveInButton 4s ease-out .75s; */
+    animation: moveInButton 4s;
+    animation-fill-mode: backwards;
+}
