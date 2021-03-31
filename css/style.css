@@ -32,3 +32,19 @@ body {
     padding: 3rem;
     box-sizing: border-box;
 }
+
+.header {
+    height: 100vh;
+    background-image: 
+        linear-gradient(
+            to right bottom,
+            rgba(242, 239, 249, 0.808),
+            rgba(254, 122, 219, 0.801)
+        ), 
+        url(../img/crew.png);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%); */
+    position: relative;
+}
