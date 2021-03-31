@@ -1,0 +1,232 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+rgba(126, 213, 111, 0.767), rgba(40, 180, 133, 0.801) 
+rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795) 
+rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795)  
+rgba(242, 239, 249, 0.808), rgba(138, 124, 174, 0.808) 
+
+Hot pink: #FE7ADA
+Light pink: #F4EEFF
+Purple: #8A7CAE
+*/
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: #777;
+    padding: 3rem;
+    box-sizing: border-box;
+}
+
+.header {
+    height: 100vh;
+    background-image: 
+        linear-gradient(
+            to right bottom,
+            rgba(242, 239, 249, 0.808),
+            rgba(254, 122, 219, 0.801)
+        ), 
+        url(../img/crew.png);
+    background-size: cover;
+    background-position: top;
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
+    /* clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%); */
+    position: relative;
+}
+
+.logo-box {
+    position: absolute;
+    top: 4em;
+    left: 4em;
+}
+
+.logo {
+    height: 3.5rem;
+}
+
+.text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.heading-primary {
+    color: rgb(8, 6, 6);
+    text-transform: uppercase;
+    backface-visibility: hidden;
+    margin-bottom: 6rem;
+}
+
+/* animation-delay: 3s; */
+/* animation-iteration-count: 3; */
+/* .heading-primary-main {
+    display: block;
+    font-size: 3em;
+    font-weight: 400;
+    letter-spacing: .15em;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+} */
+
+/* animation-delay: 3s; *//* animation-iteration-count: 3; */
+.heading-primary-main-1 {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 1rem;
+    animation-name: moveInRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+/* animation-delay: 3s; *//* animation-iteration-count: 3; */
+.heading-primary-main-2 {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    /* letter-spacing: .05em; */
+    letter-spacing: .4rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+/* animation-delay: 3s; *//* animation-iteration-count: 3; */
+.heading-primary-main-3 {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    margin-left: .25em;
+    animation-name: moveInRight;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+}
+
+/*letter-spacing: 1.8em; letter-spacing: .80em; */
+/* .heading-primary-sub {
+    display: block;
+    font-size: 1em;
+    font-weight: 700;
+    letter-spacing: .35em;    
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+} */
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80% {
+        opacity: .2;
+        transform: translate(.25em);/*Bouncing effect*/
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        opacity: .2;
+        transform: translate(-.25em);/*Bouncing effect*/
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes moveInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    99% {
+        opacity: .9;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+.btn:link, .btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 1.5em;
+    display: inline-block;
+    border-radius: 30rem;
+    transition: all .2s;
+    position: relative;
+    font-size: 1.6rem;
+}
+
+.btn:hover {
+    transform: translateY(-.5em);
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+}
+
+.btn:active {
+    transform: translateY(-.25em);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
+    z-index: -1;
+}
+
+.btn-white {
+    background-color: #fff;
+    color: rgb(8, 6, 6);
+}
+
+.btn::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn-white::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4);
+    opacity: 0;
+}
+
+.btn-animated {
+    /* animation: moveInButton 4s ease-out .75s; */
+    animation: moveInButton 4s;
+    animation-fill-mode: backwards;
+}
