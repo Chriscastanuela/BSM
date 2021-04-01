@@ -8,11 +8,12 @@ rgba(126, 213, 111, 0.767), rgba(40, 180, 133, 0.801)
 rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795) 
 rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795)  
 rgba(242, 239, 249, 0.808), rgba(138, 124, 174, 0.808) 
-
-Hot pink: #FE7ADA
-Light pink: #F4EEFF
-Purple: #8A7CAE
 */
+
+$color-primary: #F4EEFF;
+$color-primary-dark: #FE7ADA;
+$color-secondary: #8A7CAE;
+
 
 *, *::after, *::before {
     margin: 0;
@@ -38,8 +39,8 @@ body {
     background-image: 
         linear-gradient(
             to right bottom,
-            rgba(242, 239, 249, 0.808),
-            rgba(254, 122, 219, 0.801)
+            rgba($color-primary, .8),
+            rgba($color-primary-dark, .8)
         ), 
         url(../img/crew.png);
     background-size: cover;
