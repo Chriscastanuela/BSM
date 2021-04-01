@@ -13,6 +13,7 @@ rgba(242, 239, 249, 0.808), rgba(138, 124, 174, 0.808)
 $color-primary: #F4EEFF;
 $color-primary-dark: #FE7ADA;
 $color-secondary: #8A7CAE;
+$color-grey-dark: #777;
 
 
 *, *::after, *::before {
@@ -29,7 +30,7 @@ body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     line-height: 1.7;
-    color: #777;
+    color: $color-grey-dark;
     padding: 3rem;
     box-sizing: border-box;
 }
