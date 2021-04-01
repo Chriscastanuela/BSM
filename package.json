@@ -10,8 +10,11 @@
     "type": "git",
     "url": "git+https://github.com/Chriscastanuela/BSM.git"
   },
-  "author": "Chris",
+  "author": "Christopher Castanuela",
   "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  },
   "bugs": {
     "url": "https://github.com/Chriscastanuela/BSM/issues"
   },
