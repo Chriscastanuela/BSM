@@ -59,7 +59,7 @@ body {
     height: 3.5rem;
 }
 
-.text-box {
+.header__text-box {
     position: absolute;
     top: 40%;
     left: 50%;
@@ -67,7 +67,7 @@ body {
     text-align: center;
 }
 
-.heading-primary {
+.heading {
     color: rgb(8, 6, 6);
     text-transform: uppercase;
     backface-visibility: hidden;
@@ -87,7 +87,7 @@ body {
 } */
 
 /* animation-delay: 3s; *//* animation-iteration-count: 3; */
-.heading-primary-main-1 {
+.heading--1 {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -98,7 +98,7 @@ body {
 }
 
 /* animation-delay: 3s; *//* animation-iteration-count: 3; */
-.heading-primary-main-2 {
+.heading--2 {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -110,7 +110,7 @@ body {
 }
 
 /* animation-delay: 3s; *//* animation-iteration-count: 3; */
-.heading-primary-main-3 {
+.heading--3 {
     display: block;
     font-size: 6rem;
     font-weight: 400;
@@ -198,7 +198,7 @@ body {
     z-index: -1;
 }
 
-.btn-white {
+.btn--white {
     background-color: #fff;
     color: rgb(8, 6, 6);
 }
@@ -216,7 +216,7 @@ body {
     transition: all .4s;
 }
 
-.btn-white::after {
+.btn--white::after {
     background-color: #fff;
 }
 
@@ -225,7 +225,7 @@ body {
     opacity: 0;
 }
 
-.btn-animated {
+.btn--animated {
     /* animation: moveInButton 4s ease-out .75s; */
     animation: moveInButton 4s;
     animation-fill-mode: backwards;
