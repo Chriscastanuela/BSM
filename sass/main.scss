@@ -13,8 +13,10 @@ rgba(242, 239, 249, 0.808), rgba(138, 124, 174, 0.808)
 $color-primary: #F4EEFF;
 $color-primary-dark: #FE7ADA;
 $color-secondary: #8A7CAE;
-$color-grey-dark: #777;
 
+$color-grey-dark: #777;
+$color-white: #fff;
+$color-black: rgb(8, 6, 6);
 
 *, *::after, *::before {
     margin: 0;
@@ -49,90 +51,88 @@ body {
     clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
     /* clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%); */
     position: relative;
-}
-
-.logo-box {
-    position: absolute;
-    top: 4em;
-    left: 4em;
-}
-
-.logo {
-    height: 3.5rem;
-}
-
-.header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
+    // &__logo-box {
+    //     position: absolute;
+    //     top: 4em;
+    //     left: 4em;
+    // }
+    &__logo {
+        height: 3.5rem;
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
 }
 
 .heading {
-    color: rgb(8, 6, 6);
+    // color: rgba($color-black, .2);
+    color: $color-black;
     text-transform: uppercase;
     backface-visibility: hidden;
     margin-bottom: 6rem;
+    &--1 {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 1rem;
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+    }
+    
+    /* animation-delay: 3s; *//* animation-iteration-count: 3; */
+    &--2 {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        /* letter-spacing: .05em; */
+        letter-spacing: .4rem;
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    }
+    
+    /* animation-delay: 3s; *//* animation-iteration-count: 3; */
+    &--3 {
+        display: block;
+        font-size: 6rem;
+        font-weight: 400;
+        letter-spacing: 2rem;
+        margin-left: .25em;
+        animation-name: moveInRight;
+        animation-duration: 3s;
+        animation-timing-function: ease-out;
+    }
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: 3; */
+    /* .heading-primary-main {
+        display: block;
+        font-size: 3em;
+        font-weight: 400;
+        letter-spacing: .15em;
+        animation-name: moveInRight;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    } */
+
+    /* animation-delay: 3s; *//* animation-iteration-count: 3; */
+
+    /*letter-spacing: 1.8em; letter-spacing: .80em; */
+    /* .heading-primary-sub {
+        display: block;
+        font-size: 1em;
+        font-weight: 700;
+        letter-spacing: .35em;    
+        animation-name: moveInLeft;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    } */
 }
-
-/* animation-delay: 3s; */
-/* animation-iteration-count: 3; */
-/* .heading-primary-main {
-    display: block;
-    font-size: 3em;
-    font-weight: 400;
-    letter-spacing: .15em;
-    animation-name: moveInRight;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-} */
-
-/* animation-delay: 3s; *//* animation-iteration-count: 3; */
-.heading--1 {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 1rem;
-    animation-name: moveInRight;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-}
-
-/* animation-delay: 3s; *//* animation-iteration-count: 3; */
-.heading--2 {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    /* letter-spacing: .05em; */
-    letter-spacing: .4rem;
-    animation-name: moveInLeft;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-}
-
-/* animation-delay: 3s; *//* animation-iteration-count: 3; */
-.heading--3 {
-    display: block;
-    font-size: 6rem;
-    font-weight: 400;
-    letter-spacing: 2rem;
-    margin-left: .25em;
-    animation-name: moveInRight;
-    animation-duration: 3s;
-    animation-timing-function: ease-out;
-}
-
-/*letter-spacing: 1.8em; letter-spacing: .80em; */
-/* .heading-primary-sub {
-    display: block;
-    font-size: 1em;
-    font-weight: 700;
-    letter-spacing: .35em;    
-    animation-name: moveInLeft;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
-} */
 
 @keyframes moveInRight {
     0% {
@@ -178,57 +178,59 @@ body {
     }
 }
 
-.btn:link, .btn:visited {
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 1.5rem 1.5em;
-    display: inline-block;
-    border-radius: 30rem;
-    transition: all .2s;
-    position: relative;
-    font-size: 1.6rem;
-}
-
-.btn:hover {
-    transform: translateY(-.5em);
-    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
-}
-
-.btn:active {
-    transform: translateY(-.25em);
-    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
-    z-index: -1;
-}
-
-.btn--white {
-    background-color: #fff;
-    color: rgb(8, 6, 6);
-}
-
-.btn::after {
-    content: '';
-    height: 100%;
-    width: 100%;
-    display: inline-block;
-    border-radius: 10rem;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: all .4s;
-}
-
-.btn--white::after {
-    background-color: #fff;
-}
-
-.btn:hover::after {
-    transform: scaleX(1.4);
-    opacity: 0;
-}
-
-.btn--animated {
-    /* animation: moveInButton 4s ease-out .75s; */
-    animation: moveInButton 4s;
-    animation-fill-mode: backwards;
+.btn {
+    &:link, 
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 1.5em;
+        display: inline-block;
+        border-radius: 30rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 1.6rem;
+    }
+    
+    &:hover {
+        transform: translateY(-.5em);
+        box-shadow: 0 2rem 4rem rgba($color-black .2);
+        &::after {
+            transform: scaleX(1.4);
+            opacity: 0;
+        }
+    }
+    
+    &:active {
+        transform: translateY(-.25em);
+        box-shadow: 0 1rem 2rem rgba($color-black .2);
+        z-index: -1;
+    }
+    
+    &--white {
+        background-color: $color-white;
+        // color: rgba($color-black, .2);
+        color: $color-black;
+        &::after {
+            background-color: $color-white;
+        }
+    }
+    
+    &::after {
+        content: '';
+        height: 100%;
+        width: 100%;
+        display: inline-block;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+    
+    &--animated {
+        /* animation: moveInButton 4s ease-out .75s; */
+        animation: moveInButton 4s;
+        animation-fill-mode: backwards;
+    }
 }
