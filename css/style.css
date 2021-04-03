@@ -1,3 +1,14 @@
+*, *::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box; }
+
 @keyframes moveInRight {
   0% {
     opacity: 0;
@@ -32,48 +43,12 @@
     opacity: 1;
     transform: translate(0); } }
 
-*, *::after, *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: inherit; }
-
-html {
-  font-size: 62.5%; }
-
 body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #777;
-  padding: 3rem;
-  box-sizing: border-box; }
-
-/*
-COLORS:
-
-Light green: #7ed56f
-Medium green: #55c57a
-Dark green: #28b485
-rgba(126, 213, 111, 0.767), rgba(40, 180, 133, 0.801) 
-rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795) 
-rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795)  
-rgba(242, 239, 249, 0.808), rgba(138, 124, 174, 0.808) 
-*/
-.header {
-  height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(244, 238, 255, 0.8), rgba(254, 122, 218, 0.8)), url(../img/crew.png);
-  background-size: cover;
-  background-position: top;
-  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);
-  position: relative; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+  padding: 3rem; }
 
 .heading {
   color: #080606;
@@ -133,3 +108,93 @@ rgba(242, 239, 249, 0.808), rgba(138, 124, 174, 0.808)
     animation-name: moveInRight;
     animation-duration: 3s;
     animation-timing-function: ease-out; }
+
+.btn:link, .btn:visited {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 1.5rem 1.5em;
+  display: inline-block;
+  border-radius: 30rem;
+  transition: all .2s;
+  position: relative;
+  font-size: 1.6rem; }
+
+.btn:hover {
+  transform: translateY(-0.5em);
+  box-shadow: 0 2rem 4rem rgba(8, 6, 6, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4);
+    opacity: 0; }
+
+.btn:active {
+  transform: translateY(-0.25em);
+  box-shadow: 0 1rem 2rem rgba(8, 6, 6, 0.2);
+  z-index: -1; }
+
+.btn--white {
+  background-color: #fff;
+  color: #080606; }
+  .btn--white::after {
+    background-color: #fff; }
+
+.btn::after {
+  content: '';
+  height: 100%;
+  width: 100%;
+  display: inline-block;
+  border-radius: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s; }
+
+.btn--animated {
+  /* animation: moveInButton 4s ease-out .75s; */
+  animation: moveInButton 4s;
+  animation-fill-mode: backwards; }
+
+.row {
+  max-width: 114rem;
+  background-color: #eee;
+  margin: 0 auto; }
+  .row:not(:last-child) {
+    margin-bottom: 8rem; }
+  .row::after {
+    content: '';
+    display: table;
+    clear: both; }
+  .row .col-1-of-2 {
+    width: calc((100% - 6rem) / 2);
+    background-color: orangered;
+    float: left; }
+    .row .col-1-of-2:not(:last-child) {
+      margin-right: 6rem; }
+
+.header {
+  height: 100vh;
+  background-image: linear-gradient(to right bottom, rgba(244, 238, 255, 0.8), rgba(254, 122, 218, 0.8)), url(../img/crew.png);
+  background-size: cover;
+  background-position: top;
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);
+  position: relative; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+rgba(126, 213, 111, 0.767), rgba(40, 180, 133, 0.801) 
+rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795) 
+rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795)  
+rgba(242, 239, 249, 0.808), rgba(138, 124, 174, 0.808) 
+*/
