@@ -1,0 +1,22 @@
+{
+  "name": "bsm",
+  "version": "1.0.0",
+  "description": "Boerne's Strongest Movers website",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Chriscastanuela/BSM.git"
+  },
+  "author": "Christopher Castanuela",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.5.3"
+  },
+  "bugs": {
+    "url": "https://github.com/Chriscastanuela/BSM/issues"
+  },
+  "homepage": "https://github.com/Chriscastanuela/BSM#readme"
+}

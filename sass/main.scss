@@ -1,0 +1,30 @@
+@import './abstracts/functions';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+
+@import './base/animations';
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+
+
+@import './components/button';
+
+
+@import './layout/header';
+
+
+@import './pages/home';
+
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+rgba(126, 213, 111, 0.767), rgba(40, 180, 133, 0.801) 
+rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795) 
+rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795)  
+rgba(242, 239, 249, 0.808), rgba(138, 124, 174, 0.808) 
+*/
