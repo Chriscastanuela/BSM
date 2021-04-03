@@ -1,3 +1,14 @@
+@import './abstracts/functions';
+@import './abstracts/mixins';
+@import './abstracts/variables';
+
+@import './base/animations';
+@import './base/base';
+@import './base/typography';
+@import './base/utilities';
+
+@import './pages/home';
+
 /*
 COLORS:
 
@@ -9,14 +20,6 @@ rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795)
 rgba(119, 119, 119, 0.808),rgba(33, 33, 33, 0.795)  
 rgba(242, 239, 249, 0.808), rgba(138, 124, 174, 0.808) 
 */
-
-$color-primary: #F4EEFF;
-$color-primary-dark: #FE7ADA;
-$color-secondary: #8A7CAE;
-
-$color-grey-dark: #777;
-$color-white: #fff;
-$color-black: rgb(8, 6, 6);
 
 *, *::after, *::before {
     margin: 0;
@@ -48,8 +51,8 @@ body {
         url(../img/crew.png);
     background-size: cover;
     background-position: top;
-    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
-    /* clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%); */
+    // clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
+    clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);
     position: relative;
     // &__logo-box {
     //     position: absolute;
@@ -193,7 +196,7 @@ body {
     
     &:hover {
         transform: translateY(-.5em);
-        box-shadow: 0 2rem 4rem rgba($color-black .2);
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
         &::after {
             transform: scaleX(1.4);
             opacity: 0;
@@ -202,7 +205,7 @@ body {
     
     &:active {
         transform: translateY(-.25em);
-        box-shadow: 0 1rem 2rem rgba($color-black .2);
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
         z-index: -1;
     }
     
