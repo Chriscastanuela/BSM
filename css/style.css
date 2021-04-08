@@ -247,6 +247,26 @@ body {
   box-shadow: 0 0.5rem 1rem rgba(8, 6, 6, 0.15);
   transform: translateY(0); }
 
+.feature-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  font-size: 1.5rem;
+  padding: 2.5rem;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(8, 6, 6, 0.15);
+  transition: transform .3s; }
+  .feature-box__icon {
+    font-size: 6rem;
+    margin-bottom: .5rem;
+    display: inline-block;
+    background: linear-gradient(to right, #FE7ADA, #8A7CAE);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+    -webkit-text-fill-color: transparent; }
+  .feature-box:hover {
+    transform: translateY(-2rem) scale(1.03); }
+
 .row {
   max-width: 114rem;
   margin: 0 auto; }
@@ -293,6 +313,16 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0;
   margin-top: -30vh; }
+
+.section-features {
+  padding: 20rem 0;
+  background-image: linear-gradient(to right bottom, rgba(244, 238, 255, 0.8), rgba(254, 122, 218, 0.8)), url(../../img/Pics/boxes.jpg);
+  background-size: cover;
+  background-position: top; }
+  .section-features::before {
+    margin: 0 0 0 5px;
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); }
 
 /*
 COLORS:
