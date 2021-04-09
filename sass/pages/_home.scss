@@ -7,15 +7,10 @@
 .section-features {
     padding: 20rem 0;
     background-image: 
-    // linear-gradient(
-    //     to right bottom,
-    //     rgba($color-primary-light, .8),
-    //     rgba($color-primary-dark, .8)
-    // ), 
     linear-gradient(
         to right bottom,
-        rgba($color-grey-light, .8),
-        rgba($color-primary-light, .8),
+        rgba($color-grey-light, .7),
+        rgba($color-primary-light, .7)
     ), 
     url(../../img/Pics/boxes.jpg);
     background-size: cover;
@@ -26,10 +21,15 @@
         transform: scaleX(-1);
     }
 
-    // transform: skewY(7deg);
-    // & > * {
-        // transform: skewY(-7deg);
-    // }
+    /*
+            rgba($color-secondary, .8),
+        rgba($color-primary-light, .8),
+    --> Slant the Div <--
+    transform: skewY(7deg);
+    & > * {
+        transform: skewY(-7deg);
+    }
+    */
 }
 
 .section-packages {

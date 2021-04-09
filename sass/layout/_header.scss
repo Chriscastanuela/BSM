@@ -1,15 +1,10 @@
 .header {
     height: 100vh;
     background-image: 
-        // linear-gradient(
-        //     to right bottom,
-        //     rgba($color-primary-light, .8),
-        //     rgba($color-primary-dark, .8)
-        // ), 
         linear-gradient(
             to right bottom,
-            rgba($color-grey-light, .8),
             rgba($color-primary-light, .8),
+            rgba($color-grey-dark, .8)
         ), 
         url(../../img/Pics/crew.png);
     background-size: cover;

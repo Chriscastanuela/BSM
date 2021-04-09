@@ -13,7 +13,13 @@
         font-size: 6rem;
         margin-bottom: .5rem;
         display: inline-block;
-        background: linear-gradient(to right, $color-primary-dark, $color-secondary);
+        // background: linear-gradient(to right, $color-third, $color-primary-dark);
+        background: linear-gradient(
+            to right bottom,
+            rgba($color-primary-light, .7),
+            rgba($color-primary-dark, .7)
+        );
+        // background-color: $color-grey-dark;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -moz-text-fill-color: transparent;
