@@ -14,8 +14,8 @@
     // ), 
     linear-gradient(
         to right bottom,
+        rgba($color-grey-light, .8),
         rgba($color-primary-light, .8),
-        rgba($color-grey-light, .8)
     ), 
     url(../../img/Pics/boxes.jpg);
     background-size: cover;
@@ -30,4 +30,9 @@
     // & > * {
         // transform: skewY(-7deg);
     // }
+}
+
+.section-packages {
+    background-color: $color-grey-light;
+    padding: 10rem 0;
 }
