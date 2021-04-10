@@ -51,7 +51,7 @@ body {
   padding: 3rem; }
 
 .heading {
-  color: #fff;
+  color: #080606;
   opacity: .7;
   text-transform: uppercase;
   backface-visibility: hidden;
@@ -297,7 +297,7 @@ body {
 
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, rgba(119, 146, 188, 0.8), rgba(119, 119, 119, 0.8)), url(../../img/Pics/crew.png);
+  background-image: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(119, 146, 188, 0.8)), url(../../img/Pics/crew.png);
   background-size: cover;
   background-position: top;
   clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);
