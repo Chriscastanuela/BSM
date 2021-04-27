@@ -24,8 +24,14 @@
             background-color: $color-white;
             transform: rotateY(180deg);
             &-1 {
-                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
-            }
+                background-image: linear-gradient(to right bottom, $card-one-light, $card-one-dark);
+            };
+            &-2 {
+                background-image: linear-gradient(to right bottom, $card-two-light, $card-two-dark);
+            };
+            &-3 {
+                background-image: linear-gradient(to right bottom, $card-three-light, $card-three-dark);
+            };
         };
     }
     &:hover &__side--front {
@@ -43,14 +49,16 @@
         // clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
         clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);
         &--1 {
-            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark),
+            background-image: linear-gradient(to right bottom, $card-one-light, $card-one-dark),
             url(../../img/Pics/crew.png);
         };
         &--2 {
-            background-image: url(../../img/Pics/securing-uhaul.png);
+            background-image: linear-gradient(to right bottom, $color-grey-light, $color-primary-light),
+            url(../../img/Pics/uhaul-dresser.png);
         };
         &--3 {
-            background-image: url(../../img/Pics/uhaul-dresser.png);
+            background-image: linear-gradient(to right bottom, $card-three-light, $card-three-dark),
+            url(../../img/Pics/securing-uhaul.png);
         };
     }
 
@@ -73,10 +81,24 @@
         &--1 {
             background-image: linear-gradient(
                 to right bottom, 
-                rgba($color-secondary-light, .85), 
-                rgba($color-secondary-dark, .85)
+                rgba($card-one-light, .85), 
+                rgba($card-one-dark, .85)
             );
-        }
+        };
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($color-grey-light, .85), 
+                rgba($color-primary-light, .85)
+            );
+        };
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom, 
+                rgba($card-three-light, .85), 
+                rgba($card-three-dark, .85)
+            );
+        };
     }
 
     &__details {
@@ -94,6 +116,29 @@
                 }
             }
         }
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__price-box {
+        text-align: center;
+        margin-bottom: 8rem;
+        color: $color-white;
+    }
+
+    &__price-only {
+        font-size: 1.4rem;
+        text-transform: uppercase;
+    }
+
+    &__price-value {
+        font-size: 6rem;
+        font-weight: 100;
     }
 }
 
