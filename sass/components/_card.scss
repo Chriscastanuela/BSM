@@ -27,7 +27,7 @@
                 background-image: linear-gradient(to right bottom, $card-one-light, $card-one-dark);
             };
             &-2 {
-                background-image: linear-gradient(to right bottom, $card-two-light, $card-two-dark);
+                background-image: linear-gradient(to right bottom, $color-grey-light, $color-primary-light);
             };
             &-3 {
                 background-image: linear-gradient(to right bottom, $card-three-light, $card-three-dark);
@@ -46,8 +46,9 @@
         background-size: cover;
         height: 23rem;
         background-blend-mode: screen;
-        // clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
-        clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);
+        clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);// clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
         &--1 {
             background-image: linear-gradient(to right bottom, $card-one-light, $card-one-dark),
             url(../../img/Pics/crew.png);
